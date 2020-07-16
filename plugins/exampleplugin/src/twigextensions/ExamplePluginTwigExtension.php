@@ -55,6 +55,7 @@ class ExamplePluginTwigExtension extends AbstractExtension
     {
         return [
             new TwigFilter('someFilter', [$this, 'someInternalFunction']),
+             new TwigFilter('formatDateIndo', [$this, 'formatDateIndo']),
         ];
     }
 
@@ -83,6 +84,28 @@ class ExamplePluginTwigExtension extends AbstractExtension
     {
         $result = $text . " in the way";
 
+        return $result;
+    }
+
+    public function formatDateIndo($date)
+    {
+        $bulan = array (
+            1 =>   'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
+        );
+        $tanggal = explode('-', $date);
+        $tanggal[1] = date("m", mktime(0, 0, 0, $tanggal[1], 10));
+        $result = $tanggal[2].' '.$bulan[(int) $tanggal[1]].' '.$tanggal[0];
         return $result;
     }
 }

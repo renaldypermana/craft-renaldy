@@ -35,4 +35,23 @@
 {% set content %}
     <h2>{{ "Index CP Section body goes here"|t('example-plugin') }}</h2>
     <img src="{{ iconUrl }}" height="64" width="64" />
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Total Purchase</th>
+        <th>Birthday</th>
+      </thead>
+      <tbody class="list">
+        {% for item in craft.examplePlugin.getCustomers() %}
+          <tr>
+            <td class="name">{{ item.name }}</td>
+            <td class="email">{{ item.email }}</td>
+            <td class="totalPurchase">{{ item.totalPurchase }}</td>
+            <td class="birthday">{{ item.birthday|formatDateIndo }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 {% endset %}

@@ -53,4 +53,8 @@ class ExamplePluginVariable
         }
         return $result;
     }
+
+    public function getCustomers(){
+        return ExamplePlugin::$plugin->examplePluginService->getCustomers();
+    }
 }
