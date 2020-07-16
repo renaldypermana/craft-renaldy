@@ -49,4 +49,15 @@ class ExamplePluginService extends Component
 
         return $result;
     }
+    public function getCustomers()
+    {
+       $dataCustomer =
+       [
+          ['name' => 'rama', 'email' => 'rama@gmail.com', 'totalPurchase' => '14.000', 'birthday' => '2002-10-09' ],
+          ['name' => 'renaldy', 'email' => 'renaldy@gmail.com', 'totalPurchase' => '14.000', 'birthday' => '2003-5-12' ],
+          ['name' => 'fakhri', 'email' => 'fakhri17@gmail.com', 'totalPurchase' => '14.000', 'birthday' => '2001-4-25' ],
+      ];
+
+      return $dataCustomer;
+  }
 }
