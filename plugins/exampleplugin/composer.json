@@ -1,0 +1,44 @@
+{
+    "name": "renaldy/example-plugin",
+    "description": "This plugin for learn and build plugin in craft cms",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "example plugin"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ren",
+            "homepage": "github.com/renaldypermana"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "renaldy\\exampleplugin\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Example Plugin",
+        "handle": "example-plugin",
+        "developer": "Ren",
+        "developerUrl": "github.com/renaldypermana",
+        "documentationUrl": "???",
+        "changelogUrl": "???",
+        "components": {
+            "examplePluginService": "renaldy\\exampleplugin\\services\\ExamplePluginService"
+        },
+        "class": "renaldy\\exampleplugin\\ExamplePlugin"
+    }
+}
